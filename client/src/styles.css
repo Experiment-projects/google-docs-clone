@@ -21,7 +21,19 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.container{
+  width: 70%;
+  justify-content: flex-start;
+}
+.micro-container{
+  width: 29%;
+  background-color: rgb(65, 105, 139);
+  min-height: 100%;
+  justify-content: flex-end;
+}
+.container-main{
+  display: flex;
+}
 .container .ql-toolbar.ql-snow {
   display: flex;
   justify-content: center;

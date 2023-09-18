@@ -10,7 +10,7 @@ mongoose.connect("mongodb://localhost/google-docs-clone", {
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "*",
     methods: ["GET", "POST"],
   },
 })
@@ -22,7 +22,7 @@ io.on("connection", socket => {
     const document = await findOrCreateDocument(documentId)
     socket.join(documentId)
     socket.emit("load-document", document.data)
-
+    console.log("loaded")
     socket.on("send-changes", delta => {
       socket.broadcast.to(documentId).emit("receive-changes", delta)
     })
