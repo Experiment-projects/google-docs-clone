@@ -1,5 +1,15 @@
 const mongoose = require("mongoose")
 const Document = require("./Document")
+const express = require('express');
+const path = require('path');
+const app = express();
+const http = require('http').Server(app);
+// const io = require('socket.io')(http);
+app.use('/home', express.static(path.join(__dirname, 'build')));
+
+app.get('/home', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 mongoose.connect("mongodb://localhost/google-docs-clone", {
   useNewUrlParser: true,
@@ -40,3 +50,8 @@ async function findOrCreateDocument(id) {
   if (document) return document
   return await Document.create({ _id: id, data: defaultValue })
 }
+const PORT = process.env.PORT || 3002;
+
+http.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
