@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
+import languages from "./languages.json"
 import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
 
@@ -29,7 +30,7 @@ export default function TextEditor() {
   const [selectedLanguage, setSelectedLanguage] = useState("en-US");
   const [socketStatus, setSocketStatus] = useState("Connecting...");
   useEffect(() => {
-    const s = io("http://localhost:3001/");
+    const s = io("https://nats.aicte-india.org/");
     s.on("connect", () => {
       setSocketStatus("Connected");
     });
@@ -219,9 +220,11 @@ export default function TextEditor() {
           <div>
           <label htmlFor="languageDropdown">Select Language:</label>
           <select id="languageDropdown" value={selectedLanguage} onChange={handleLanguageChange}>
-            <option value="en-US">English (US)</option>
+            <option selected disabled>Select a Language</option>
+            {languages.map(language =><option value={language.code}>{language.name}</option>)}
+            {/* <option value="en-US">English (US)</option>
             <option value="es-ES">Spanish (Spain)</option>
-            <option value="te-IN">Telugu</option>
+            <option value="te-IN">Telugu</option> */}
             {/* Add more language options as needed */}
           </select>
           </div>

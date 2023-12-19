@@ -1,0 +1,91 @@
+[
+    
+    {
+        "name": "English",
+        "code": "en-IN",
+        "literal": "English",
+        "script": "Latn",
+        "isBeta": false
+    },
+    {
+        "name": "Hindi",
+        "short": "हि",
+        "code": "hi-IN",
+        "literal": "हिन्दी",
+        "script": "Deva",
+        "isBeta": false
+    },
+    {
+        "name": "Telugu",
+        "short": "తె",
+        "code": "te-IN",
+        "literal": "తెలుగు",
+        "script": "Telu",
+        "isBeta": false
+    },
+    {
+        "name": "Tamil",
+        "short": "த",
+        "code": "ta-IN",
+        "literal": "தமிழ்",
+        "script": "Taml",
+        "isBeta": false
+    },
+    {
+        "name": "Kannada",
+        "short": "ಕ",
+        "code": "kn-IN",
+        "literal": "ಕನ್ನಡ",
+        "script": "Knda",
+        "isBeta": false
+    },
+    {
+        "name": "Malayalam",
+        "code": "ml-IN",
+        "literal": "മലയാളം",
+        "script": "Mlym",
+        "isBeta": false
+    },
+    {
+        "name": "Bangla",
+        "code": "bn-IN",
+        "literal": "বাংলা",
+        "script": "Beng",
+        "isBeta": true
+    },
+    {
+        "name": "Marathi",
+        "code": "mr-IN",
+        "literal": "मराठी",
+        "script": "Deva",
+        "isBeta": true
+    },
+    {
+        "name": "Gujarati",
+        "code": "gu-IN",
+        "literal": "ગુજરાતી",
+        "script": "Gujr",
+        "isBeta": true
+    },
+    {
+        "name": "Odiya",
+        "code": "or-IN",
+        "literal": "ଓଡ଼ିଆ",
+        "script": "Orya",
+        "isBeta": true
+    },
+    {
+        "name": "Punjabi",
+        "code": "pa-IN",
+        "literal": "ਪੰਜਾਬੀ",
+        "script": "Guru",
+        "isBeta": true
+    },
+    {
+        "name": "Assamese",
+        "code": "as-IN",
+        "literal": "অসমীয়া",
+        "script": "Beng",
+        "isBeta": true
+    }
+]
